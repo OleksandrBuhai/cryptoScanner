@@ -2,6 +2,8 @@
 import  { useEffect } from 'react'
 import homeStore from '../store/homestore'
 import { Link } from 'react-router-dom'
+import Categories from './Categories'
+import ExchangeRates from './ExchangeRates'
 
 export default function Home() {
 
@@ -25,6 +27,10 @@ const store = homeStore()
             </div>
         )
      })}
+     <div>
+        <Categories/>
+        <ExchangeRates/>
+     </div>
     </div>
   )
 }
