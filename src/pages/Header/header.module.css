@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1rem;
+
+}
+
+.linkContainer {
+  display: flex;
+  align-items: center;
+}
+
+.link {
+  margin-right: 2rem;
+  text-decoration: none;
+  color: white;
+}
+
+.link:first-child {
+  margin-right: auto;
+}
+
+img {
+  margin-right: 2rem;
+  max-height: 40px;
+}

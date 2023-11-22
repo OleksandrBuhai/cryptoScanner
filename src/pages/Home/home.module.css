@@ -1,0 +1,73 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #BFA181;
+}
+
+.trendsCoinContainer {
+    margin-top: 5rem;
+}
+
+.input {
+    width: 100%;
+    height: 2rem;
+    outline: none;
+    border: 1px solid #BFA181;
+    padding: 10px;
+    background-color: #0A1828;
+    color: white;
+}
+
+.coinText {
+    width: 40rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+    font-size: 1.5rem;
+    padding: 1rem;
+    align-items: center;
+    transition: 1s ease;
+    color: #BFA181;
+   
+}
+
+.coinText:hover li {
+    filter: blur(5px);
+}
+
+
+
+.blur {
+    cursor: pointer;
+    color: #EE6D52;
+    filter: blur(0px);
+}
+
+.coinText>li {
+    display: block;
+    display: flex;
+    justify-content: space-between;
+    width: 40rem;
+    border-top: 1px solid #BFA181;
+    border-bottom: 1px solid #BFA181;
+    transition: .5s;
+    padding: 2rem;
+}
+
+.coinText>li:hover {
+    cursor: pointer;
+    color: #EE6D52;
+    border: 1px solid #EE6D52;
+    transform: scale(1.2);
+    filter: blur(0px);
+}
+
+.link {
+    text-decoration: none;
+    color: #BFA181;
+    cursor: pointer;
+}

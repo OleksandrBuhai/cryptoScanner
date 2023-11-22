@@ -43,12 +43,12 @@ const homeStore = create((set) => ({
         ])
 
         const btcPrice = btsRes.data.bitcoin.usd
-        console.log(btcPrice)
+       
 
         
         const coins = res.data.coins.map((coin) => ({
             name: coin.item.name,
-            image: coin.item.smallImg, 
+            image: coin.item.small, 
             id: coin.item.id,
             priceBtc: coin.item.price_btc.toFixed(10),
             priceUsd: (coin.item.price_btc * btcPrice).toFixed(6)
