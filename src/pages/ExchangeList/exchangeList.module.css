@@ -51,3 +51,16 @@ img {
   color: #8707ff;
   transform: scale(1.1);
 }
+
+@media screen and (max-width: 768px) {
+  .gridContainer {
+    padding: 0;
+    padding-top: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .buttonContainer{
+    flex-direction: column;
+  }
+}

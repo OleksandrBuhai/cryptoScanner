@@ -37,7 +37,7 @@ export default function ExchangeRates() {
             <div className={style.navContainer}>
                 <Input value={searchTerm} setValue={(e) => setSearchTerm(e.target.value)} />
                 <div style={{ display: 'flex', marginLeft: '2rem', alignItems: 'center', gap: '2rem' }}>
-                    Filter :
+                    Filter
                     <Button onClickHandler={() => setFilterType('all')} content={'All'} />
                     <Button onClickHandler={() => setFilterType('fiat')} content={'Fiat'} />
                     <Button onClickHandler={() => setFilterType('crypto')} content={'Crypto'} />

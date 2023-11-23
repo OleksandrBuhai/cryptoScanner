@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
-  background-color: #001233;
+  background-color: black;
   height: 10vh;
   width: 100%;
 }
@@ -40,7 +40,7 @@
 .link {
   margin-right: 2rem;
   text-decoration: none;
-  color:#8707ff;
+  color:white;
 }
 
 .link:hover {
@@ -49,9 +49,36 @@
 
 .link:active,
 .link:focus {
-  color: white
+  color: #AF40FF
 }
 
 
 
 
+
+
+@media screen and (max-width: 768px) {
+  
+  .header {
+    height: 10rem;
+  }
+
+  .linkContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .searchContainer {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .inputContainer {
+    width: 100%;
+    
+    gap: 5rem;
+  }
+
+ 
+}

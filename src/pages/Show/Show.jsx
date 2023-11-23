@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect } from "react";
 import showStore from "../../store/showStore";
 import { useParams } from "react-router-dom";
-import { Area, AreaChart, CartesianGrid, Tooltip, XAxis, YAxis } from "recharts";
+import { Area, AreaChart, CartesianGrid,ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 import style from './show.module.css';
 
 export default function Show() {
@@ -16,9 +16,9 @@ export default function Show() {
   return (
     <div className={style.container}>
       <div className={style.chartContainer}>
+        <ResponsiveContainer width="100%" height={500}>
         <AreaChart
-          width={600}
-          height={500}
+        
           data={store.graphData}
           margin={{
             top: 10,
@@ -33,6 +33,7 @@ export default function Show() {
           <Tooltip />
           <Area type="monotone" dataKey="Price" stroke="#BFA181" fill="BFA181" />
         </AreaChart>
+        </ResponsiveContainer>
       </div>
 
       <div className={style.infoContainer}>

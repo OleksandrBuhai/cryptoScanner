@@ -27,7 +27,7 @@ const homeStore = create((set) => ({
                 id: coin.id
             }));
             set({coins})
-            console.log(coins)
+          
         } else {
             set({coins: trending})
         }
@@ -55,8 +55,7 @@ const homeStore = create((set) => ({
         }));
 
         set({coins, trending:coins})
-        console.log(res)
-        console.log(coins)
+       
     }
 }))
 

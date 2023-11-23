@@ -13,5 +13,16 @@
     align-items: center;
 }
 
+@media screen and (max-width:768px) {
+    .container {
+        padding: 0;
+        width: 80%;
+        align-items: center;
+    }
+
+    .navContainer {
+        flex-direction: column;
+    }
+}
 
 

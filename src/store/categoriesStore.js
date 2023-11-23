@@ -23,7 +23,7 @@ const categoriesStore = create((set) => ({
     }))
       set({categories})
 
-      console.log(res)
+     
     }
 }))
 

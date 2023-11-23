@@ -13,7 +13,7 @@ export default function Header({ store }) {
 
   const [searchQuery, setSearchQuery] = useState('');
 
-
+  const mobile = window.innerWidth <= 768 ? true : false
 
   const handleSearch = () => {
 

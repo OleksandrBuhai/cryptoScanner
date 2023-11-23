@@ -13,7 +13,6 @@ import homeStore from '../../store/homestore'
 
 
 
-
 export default function Main() {
 
     const store = homeStore()

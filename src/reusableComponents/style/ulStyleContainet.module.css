@@ -52,8 +52,6 @@
     filter: blur(5px);
 }
 
-
-
 .blur {
     cursor: pointer;
     color: #EE6D52;
@@ -83,4 +81,26 @@
     text-decoration: none;
     color: #BFA181;
     cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .cointainer {
+        width: 70%;
+    }
+
+    .ulContainer>li {
+        width: 80%;
+    }
+    .coinText > li {
+        align-items: center;
+        width: 90%;
+        font-size: 1rem;
+    }
+
+    .coinText {
+        width: 100%;
+        padding: 0;
+    }
+
+    
 }
