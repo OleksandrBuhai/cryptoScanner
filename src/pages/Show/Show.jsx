@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect } from "react";
 import showStore from "../../store/showStore";
 import { useParams } from "react-router-dom";
-import { Area, AreaChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
+import { Area, AreaChart, CartesianGrid, Tooltip, XAxis, YAxis } from "recharts";
 import style from './show.module.css';
 
 export default function Show() {
@@ -37,12 +37,13 @@ export default function Show() {
 
       <div className={style.infoContainer}>
         <header className={style.header}>
-          <img src={store.dataRes?.data?.image.large} alt={store.dataRes?.data?.name} />
+          <img src={store.dataRes?.data?.image.large} alt={store.dataRes?.data?.name}
+          className={style.img} />
           <h2>{store.dataRes?.data?.name}</h2>
         </header>
 
         <div className={style.detailsContainer}>
-          <h2>Details</h2>
+          <h2>Details:</h2>
           <div className={style.detailsItem}>
             <h4>Market cap rank</h4>
             <span>{store.dataRes?.data?.market_cap_rank}</span>

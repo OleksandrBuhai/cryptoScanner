@@ -1,0 +1,93 @@
+.container {
+    color: white;
+    padding: 2rem;
+}
+
+.navContainer {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+    align-items: center;
+}
+
+.navContainer button {
+    
+    align-items: center;
+    background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+    border: 0;
+    border-radius: 8px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    display: flex;
+    font-family: Phantomsans, sans-serif;
+    font-size: 20px;
+    justify-content: center;
+    line-height: 1em;
+    padding: 1px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.navContainer button:active,
+.navContainer button:hover {
+  outline: 0;
+}
+
+.navContainer span {
+  background-color: rgb(5, 6, 45);
+  padding: 8px 12px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+.navContainer button:hover span {
+  background: none;
+}
+
+
+.input {
+    
+    margin-right: 10px;
+    color: white;
+    border: 2px solid #8707ff;
+    border-radius: 10px;
+    padding: 10px 25px;
+    background: transparent;
+   
+   }
+   
+.input:active {
+    box-shadow: 2px 2px 15px #8707ff inset;
+   }
+
+.currency{
+   
+}
+.currency>li {
+    display: block;
+    display: flex;
+    justify-content: space-between;
+    width: 40rem;
+    border-top: 1px solid #BFA181;
+    border-bottom: 1px solid #BFA181;
+    transition: .5s;
+    padding: 2rem;
+}
+
+.currency>li:hover {
+    cursor: pointer;
+    color: #EE6D52;
+    border: 1px solid #EE6D52;
+    transform: scale(1.2);
+    filter: blur(0px);
+}

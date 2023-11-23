@@ -1,19 +1,93 @@
-
-
 .gridContainer {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-  }
-  
-  .gridItem {
-    border: 1px solid #ccc; 
-    padding: 10px;
-    text-align: center;
-  }
-  
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-  
+  padding: 5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 5rem;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+  margin-top: 2rem;
+  margin-left: 2rem;
+  align-items: center;
+}
+.button {
+  align-items: center;
+  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 1em;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.button:active,
+.button:hover {
+  outline: 0;
+}
+
+.button span {
+  background-color: rgb(5, 6, 45);
+  padding: 8px 12px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+.button:hover span {
+  background: none;
+}
+
+
+
+.gridItem {
+  color: white;
+  padding: 0.5rem;
+  background-image: radial-gradient(circle, #01050b, #00091a, #060a26, #110a2f, #200535);
+  border: 1px solid #ccc;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.2s ease-in;
+  border-radius: 10px;
+  box-shadow: 7px 7px 11px -3px white;
+}
+
+.gridItem:hover {
+  transform: scale(1.2);
+  box-shadow: 14px 14px 11px -3px #8707ff;
+  border: 1px solid #8707ff;
+}
+
+img {
+  width: 5rem
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  transition: 0.2s ease-in;
+}
+
+.link:hover {
+  color: #8707ff;
+  transform: scale(1.1);
+}

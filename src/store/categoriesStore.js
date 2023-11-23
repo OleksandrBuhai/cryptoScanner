@@ -9,7 +9,7 @@ const categoriesStore = create((set) => ({
 
     fetchCategories: async () => {
 
-      const res = await axios.get( 'https://api.coingecko.com/api/v3/exchanges?per_page=30&page=5')
+      const res = await axios.get( 'https://api.coingecko.com/api/v3/exchanges?per_page=100&page=5')
 
       const categories = res.data.map((el)=> ({
         id:el.id,
