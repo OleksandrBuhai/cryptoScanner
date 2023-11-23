@@ -1,3 +1,25 @@
+.ulContainer{
+   
+}
+.ulContainer>li {
+    display: block;
+    display: flex;
+    justify-content: space-between;
+    width: 40rem;
+    border-top: 1px solid #BFA181;
+    border-bottom: 1px solid #BFA181;
+    transition: .5s;
+    padding: 2rem;
+}
+
+.ulContainer>li:hover {
+    cursor: pointer;
+    color: #EE6D52;
+    border: 1px solid #EE6D52;
+    transform: scale(1.2);
+    filter: blur(0px);
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -11,20 +33,6 @@
     margin-top: 5rem;
 }
 
-.input {
-    width: 100%;
-    color: #8707ff;
-    border: 2px solid #8707ff;
-    border-radius: 10px;
-    padding: 10px 25px;
-    background: transparent;
-    padding: 20px;
-    color:White;
-   }
-   
-   .input:active {
-    box-shadow: 2px 2px 15px #8707ff inset;
-   }
 
 .coinText {
     width: 40rem;

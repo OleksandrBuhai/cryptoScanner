@@ -1,39 +1,33 @@
 import { useEffect } from 'react';
-import homeStore from '../../store/homestore';
 import { Link } from 'react-router-dom';
-import style from './home.module.css';
+import Input from '../../reusableComponents/Input/Input';
+import ulStyle from '../../reusableComponents/style/ulStyleContainet.module.css'
 
-export default function Home() {
-    const store = homeStore();
+export default function Home({store}) {
+  
 
     useEffect(() => {
         store.fetchCoins();
     }, []);
 
     return (
-        <div className={style.container}>
-            <div className={style.trendsCoinContainer}>
-                <input
-                    className={style.input}
-                    type='text'
-                    value={store.query}
-                    onChange={store.setQuery}
-                    placeholder='type coin or nft name'
-                />
+        <div className={ulStyle.container}>
+            <div style={{marginTop:'5rem'}}>
+                <Input value={store.query} setValue={store.setQuery}/>
                 <div>
                     {store.query.length !== 0 ? (
-                        <h2 className={style.fire}>
+                        <h2 >
                             Result for {store.query}
                         </h2>
                     ) : (
-                        <h2 className={style.fire}>🔥Trend list🔥</h2>
+                        <h2 >🔥Trend list🔥</h2>
                     )}
 
-                    <ul className={style.coinText}>
+                    <ul className={ulStyle.coinText}>
                         {store.coins.map((coin) => (
                             <li key={coin.id}>
-                                <img className={style.img} src={coin.image} />
-                                <Link to={`/${coin.id}`} className={style.link}>
+                                <img className={ulStyle.img} src={coin.image} />
+                                <Link to={`/${coin.id}`} className={ulStyle.link}>
                                     {coin.name}
                                 </Link>
                                 <div>

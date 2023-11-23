@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import exchangeStore from '../../store/exchangeStore';
 import style from './exchangerates.module.css'
+import Input from '../../reusableComponents/Input/Input';
+import Button from '../../reusableComponents/Button/Button';
+import ulstyle from '../../reusableComponents/style/ulStyleContainet.module.css'
+
 
 export default function ExchangeRates() {
     const store = exchangeStore();
@@ -31,25 +35,17 @@ export default function ExchangeRates() {
         <div className={style.container}>
             <h4>Exchange rate</h4>
             <div className={style.navContainer}>
-                <input
-                    className={style.input}
-                    type="text"
-                    placeholder="Search currency"
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                />
-                Filter by type:
-                <button onClick={() => setFilterType('all')}>
-                    <span>All</span></button>
-                <button onClick={() => setFilterType('fiat')}>
-                    <span>Fiat</span></button>
-                <button onClick={() => setFilterType('crypto')}>
-                    <span>Crypto</span>
-                </button>
+                <Input value={searchTerm} setValue={(e) => setSearchTerm(e.target.value)} />
+                <div style={{ display: 'flex', marginLeft: '2rem', alignItems: 'center', gap: '2rem' }}>
+                    Filter :
+                    <Button onClickHandler={() => setFilterType('all')} content={'All'} />
+                    <Button onClickHandler={() => setFilterType('fiat')} content={'Fiat'} />
+                    <Button onClickHandler={() => setFilterType('crypto')} content={'Crypto'} />
+                </div>
             </div>
             ExchangeRates:
             <div >
-                <ul  className={style.currency}>
+                <ul className={ulstyle.ulContainer}>
                     {Object.entries(filteredExchange).map(([currencyCode, currencyData]) => (
                         <li key={currencyCode}>
                             {currencyData.name}: {currencyData.value} {currencyData.unit} ({currencyData.type})

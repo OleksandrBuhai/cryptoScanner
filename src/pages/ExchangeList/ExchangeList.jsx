@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import categoriesStore from '../../store/categoriesStore';
 import style from './exchangeList.module.css';
+import Button from '../../reusableComponents/Button/Button';
 
 export default function ExchangeList() {
   const store = categoriesStore();
@@ -25,17 +26,8 @@ export default function ExchangeList() {
   return (
     <div>
       <div className={style.buttonContainer}>
-      <button
-     className={style.button}
-      onClick={handleSortByTrustScore}>
-        <span>Sort by Trust Score</span></button>
-      <button
-       className={style.button}
-      onClick={handleSortAlphabetically}>
-        <span>Sort Alphabetically
-
-        </span>
-        </button>
+        <Button onClickHandler={handleSortByTrustScore} content={'Sort by Trust Score'} />
+        <Button onClickHandler={handleSortAlphabetically} content={'Sort Alphabetically'} />
       </div>
       <div className={style.gridContainer}>
         {(sortBy || store.categories).map((el) => (

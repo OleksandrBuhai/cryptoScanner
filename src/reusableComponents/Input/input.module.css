@@ -1,0 +1,14 @@
+.input {
+    width: 100%;
+    color: #8707ff;
+    border: 2px solid #8707ff;
+    border-radius: 10px;
+    padding: 10px 25px;
+    background: transparent;
+    padding: 20px;
+    color:White;
+   }
+   
+   .input:active {
+    box-shadow: 2px 2px 15px #8707ff inset;
+   }
